@@ -1,15 +1,15 @@
 ﻿using Itmo.ObjectOrientedProgramming.Lab3.Entities.Adressees;
 using Itmo.ObjectOrientedProgramming.Lab3.Entities.Messages;
 
-namespace Itmo.ObjectOrientedProgramming.Lab3.Entities.Topiks;
+namespace Itmo.ObjectOrientedProgramming.Lab3.Entities.Topics;
 
-public class Topik
+public class Topic
 {
     public string Name { get; }
 
     private readonly List<IAdressee> _adressee = new();
 
-    public Topik(string name)
+    public Topic(string name)
     {
         Name = name;
     }

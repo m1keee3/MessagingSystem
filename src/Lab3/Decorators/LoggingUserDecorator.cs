@@ -8,9 +8,9 @@ namespace Itmo.ObjectOrientedProgramming.Lab3.Decorators;
 public class LoggingUserDecorator : IUser
 {
     private readonly User _user;
-    private readonly MockLogger _logger;
+    private readonly ILogger _logger;
 
-    public LoggingUserDecorator(MockLogger logger, User user)
+    public LoggingUserDecorator(ILogger logger, User user)
     {
         _user = user;
         _logger = logger;
@@ -24,6 +24,7 @@ public class LoggingUserDecorator : IUser
 
     public bool CheckIfMessageRead(int ind)
     {
+        _logger.Log($"Check if {ind} message has been checked");
         return _user.CheckIfMessageRead(ind);
     }
 
